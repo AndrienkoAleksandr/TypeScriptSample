@@ -1,0 +1,32 @@
+{
+  "name": "typescriptsample",
+  "version": "0.0.1",
+  "description": "Simple TypeScript sample",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AndrienkoAleksandr/TypeScriptSample.git"
+  },
+  "keywords": [
+    "typescipt-gulp"
+  ],
+  "author": "Alexander Andrienko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrienkoAleksandr/TypeScriptSample/issues"
+  },
+  "homepage": "https://github.com/AndrienkoAleksandr/TypeScriptSample#readme",
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.4",
+    "tsify": "^3.0.0",
+    "typescript": "^2.1.5",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-buffer": "1.0.0",
+    "gulp-sourcemaps": "2.3.1"
+  }
+}

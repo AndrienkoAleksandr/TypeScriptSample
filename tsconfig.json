@@ -1,0 +1,13 @@
+{
+    "files": [
+        "src/*.ts",
+        "src/*.js"
+    ],
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "target": "es5",
+        "allowJs": true,
+        "sourceMap": true
+    }
+}
