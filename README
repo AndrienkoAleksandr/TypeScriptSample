@@ -1,4 +1,4 @@
-This simple test typeScript project with Gulp task to project build.
-For building project: 
+This is simple test typeScript project with Gulp task to build project.
+Build project: 
     gulp
 There is distribution files inside /dist folder after gulp build.
