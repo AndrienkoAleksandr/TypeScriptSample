@@ -2,11 +2,18 @@ var gulp = require("gulp");
 var browserify = require("browserify");
 var source = require('vinyl-source-stream');
 var tsify = require("tsify");
-var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
+var buffer = require('vinyl-buffer');
+var fsExtra = require("fs-extra");
+
 var paths = {
     pages: ['src/*.html']
 };
+
+gulp.task("clean", function() {
+        return fsExtra.emptyDirSync('dist');
+});
 
 gulp.task("copy-html", function () {
     return gulp.src(paths.pages)
@@ -15,9 +22,9 @@ gulp.task("copy-html", function () {
 
 gulp.task("default", ["copy-html"], function () {
     return browserify({
-        basedir: '.',
+        basedir: 'dist',
         debug: true,
-        entries: ['src/main.ts', "src/test.js"],
+        entries: ['../src/main.ts', "../src/test.js"],
         cache: {},
         packageCache: {}
     })
@@ -25,7 +32,11 @@ gulp.task("default", ["copy-html"], function () {
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({"loadMaps": true}))
-    .pipe(sourcemaps.write('./', { sourceRoot: "../src"}))
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./', {sourceRoot: "."}))
     .pipe(gulp.dest("dist"));
 });
+
+
+
