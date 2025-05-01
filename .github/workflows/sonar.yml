@@ -25,7 +25,7 @@ jobs:
           curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
           unzip sonar-scanner.zip
           ./sonar-scanner-*/bin/sonar-scanner \
-            -Dsonar.projectKey=backstage \
+            -Dsonar.projectKey=any-key \
             -Dsonar.sources=. \
             -Dsonar.host.url=https://sonarqube.apps.rosa.tdrkz-ek9mv-49m.ykuj.p3.openshiftapps.com\
             -Dsonar.login=$SONAR_TOKEN
