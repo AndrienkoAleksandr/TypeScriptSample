@@ -27,5 +27,5 @@ jobs:
           ./sonar-scanner-*/bin/sonar-scanner \
             -Dsonar.projectKey=any_key \
             -Dsonar.sources=. \
-            -Dsonar.host.url=https://sonarqube.apps.rosa.x4rpa-sde6f-ak6.86pq.p3.openshiftapps.com \
+            -Dsonar.host.url=https://sonarqube.apps.rosa.tdrkz-ek9mv-49m.ykuj.p3.openshiftapps.com\
             -Dsonar.login=$SONAR_TOKEN
